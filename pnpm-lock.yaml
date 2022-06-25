@@ -1,0 +1,23 @@
+lockfileVersion: 5.3
+
+importers:
+
+  .:
+    specifiers:
+      '@types/node': ^18.0.0
+      acorn: ^8.7.1
+    devDependencies:
+      '@types/node': 18.0.0
+      acorn: 8.7.1
+
+packages:
+
+  /@types/node/18.0.0:
+    resolution: {integrity: sha512-cHlGmko4gWLVI27cGJntjs/Sj8th9aYwplmZFwmmgYQQvL5NUsgVJG7OddLvNfLqYS31KFN0s3qlaD9qCaxACA==}
+    dev: true
+
+  /acorn/8.7.1:
+    resolution: {integrity: sha512-Xx54uLJQZ19lKygFXOWsscKUbsBZW0CPykPhVQdhIeIwrbPmJzqeASDInc8nKBnp/JT6igTs82qPXz069H8I/A==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+    dev: true

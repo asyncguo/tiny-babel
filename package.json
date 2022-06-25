@@ -1,0 +1,20 @@
+{
+  "name": "tiny-babel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "authors": [
+    "asyncguo <asyncguo@163.com> (https://github.com/asyncguo)"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asyncguo/tiny-babel"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "acorn": "^8.7.1"
+  }
+}
