@@ -1,0 +1,17 @@
+{
+  "name": "@examples/app",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "esno ./src/parser.ts"
+  },
+  "keywords": [],
+  "author": "asyncguo",
+  "dependencies": {
+    "@tiny-babel/parser": "workspace:*"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "esno": "^0.16.3"
+  }
+}
