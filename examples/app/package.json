@@ -3,12 +3,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "esno ./src/parser.ts"
+    "start": "esno ./src/traverse.ts"
   },
   "keywords": [],
   "author": "asyncguo",
   "dependencies": {
-    "@tiny-babel/parser": "workspace:*"
+    "@tiny-babel/parser": "workspace:*",
+    "@tiny-babel/traverse": "workspace:*"
   },
   "license": "ISC",
   "devDependencies": {
