@@ -1,0 +1,77 @@
+{
+  /*
+   * @description 编辑器配置
+   * @param tabSize 默认tab为两个空格
+   * @param formatOnSave 保存时自动修复
+   */
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  /*
+   * @description eslint 配置
+   * @param alwaysShowStatus 配置
+   * @param validate 在vue中添加错误提示
+   */
+  "eslint.alwaysShowStatus": true,
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue",
+  ],
+  /*
+   * @description tslint 配置
+   * @param autoFixOnSave 保存时自动修复
+   * @param alwaysShowRuleFailuresAsWarnings 所有特征都是用 Warnings
+   */
+  "tslint.autoFixOnSave":  true,
+  "tslint.alwaysShowRuleFailuresAsWarnings": true,
+  /*
+   * @description stylelint 配置
+   * @param autoFixOnSave 保存时自动修复
+   */
+  "stylelint.autoFixOnSave":  true,
+  /*
+   * @description 使用单引号
+   */
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.singleQuote": true,
+  /*
+   * @description vetur 配置
+   */
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatterOptions": {
+    "prettier": {
+      "semi": false,
+      "singleQuote": true
+    }
+  },
+  /*
+   * @description 配置编辑器设置以覆盖某种语言
+   */
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "octref.vetur"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.snippetSuggestions": "bottom",
+  "editor.suggest.snippetsPreventQuickSuggestions": false
+}
