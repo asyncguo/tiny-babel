@@ -1,29 +1,50 @@
-import { parse } from '@tiny-babel/parser'
-import traverse from '@tiny-babel/traverse'
+import { parse } from '@tiny-babel/parser';
+import traverse from '@tiny-babel/traverse';
+import generator from '@tiny-babel/generator';
 
-const ast = parse(`
-  const a = 1234
-  let b = 'abcd'
-`, {
+const sourceCode = `
+const c = 1;
+const d = 2;
+const e = 4;
+
+function add(a, b) {
+    const tmp = 1;
+    return a + b;
+}
+
+add(c, d);
+`;
+
+const ast = parse(sourceCode, {
   ecmaVersion: 'latest',
-  plugins: [
-    'literal'
-  ]
-})
+  plugins: ['literal'],
+});
 
 traverse(ast, {
-  Identifier: {
-    exit(path) {
-      console.log('path====', path);
-      
-      console.log('isVariableDeclaration', path?.isVariableDeclaration());
-      
-      let curPath = path
-      while (curPath) {
-        // console.log('curPath.node.type', curPath.node);
-        
-        curPath = curPath.parentPath
+  Program(path) {
+    console.log('================================');
+    console.log('Program.scope', path.scope);
+    console.log('================================');
+
+    Object.entries(path.scope.bindings).forEach(([id, binding]) => {
+      if (!binding.referenced) {
+        binding.path.remove();
       }
-    }
-  }
-})
+    });
+  },
+  FunctionDeclaration(path) {
+    console.log('================================');
+    console.log('FunctionDeclaration.scope', path.scope);
+    console.log('================================');
+
+    Object.entries(path.scope.bindings).forEach(([id, binding]) => {
+      if (!binding.referenced) {
+        binding.path.remove();
+      }
+    });
+  },
+});
+
+console.log('ast', JSON.stringify(ast, null, 2));
+
+console.log('generator', generator(ast, sourceCode, 'foo.js'));

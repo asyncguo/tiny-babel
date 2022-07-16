@@ -14,14 +14,22 @@ importers:
 
   examples/app:
     specifiers:
+      '@tiny-babel/generator': workspace:*
       '@tiny-babel/parser': workspace:*
       '@tiny-babel/traverse': workspace:*
       esno: ^0.16.3
     dependencies:
+      '@tiny-babel/generator': link:../../packages/generator
       '@tiny-babel/parser': link:../../packages/parser
       '@tiny-babel/traverse': link:../../packages/traverse
     devDependencies:
       esno: 0.16.3
+
+  packages/generator:
+    specifiers:
+      source-map: ^0.7.4
+    dependencies:
+      source-map: 0.7.4
 
   packages/parser:
     specifiers: {}
@@ -310,6 +318,11 @@ packages:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /source-map/0.7.4:
+    resolution: {integrity: sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==}
+    engines: {node: '>= 8'}
+    dev: false
 
   /tsx/3.6.0:
     resolution: {integrity: sha512-XzqSxPmyJnI7ZtEX/CLE/CSDkqbL7dK4jwtJRIZpV0EhCxWqtb1OqJPlUc4CVS3/MFdpt8ZxLpvPFohWRTHbzw==}
