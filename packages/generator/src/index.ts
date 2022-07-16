@@ -1,4 +1,3 @@
-//
 import { SourceMapGenerator } from 'source-map';
 
 class Printer {
